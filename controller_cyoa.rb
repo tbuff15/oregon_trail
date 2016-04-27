@@ -8,7 +8,7 @@ get '/' do
 	erb :index
 end
 
-get 'direction/ :choice' do
+get '/direction/:choice' do
 	case params[:choice]
 	when "river"
 		@headline ="You reach the river"
@@ -21,6 +21,7 @@ get 'direction/ :choice' do
 		@question = "You can go fast and face the bumps or go slow and steady..."
 		@option_a = "FAST"
 		@option_b = "SLOW"
+		erb :index
 
 
 
@@ -28,3 +29,5 @@ get 'direction/ :choice' do
 
 		#slow and safe- you are low on food but alive, you come across bison
 		#fast and bumpy- you are caught in an avalanche and die 
+	end
+end 
