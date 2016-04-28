@@ -8,7 +8,7 @@ get '/' do
 	erb :index
 end
 
-get 'direction/ :choice' do
+get '/direction/:choice' do
 	case params[:choice]
 	when "river"
 		@headline ="You reach the river"
@@ -84,15 +84,5 @@ get 'direction/ :choice' do
 										@question = "You die rich. You conquered the Oregon trail."
 										erb :ending 
 
-
-
-
-
-
-
-
-
-
-
-		#slow and safe- you are low on food but alive, you come across bison
-		#fast and bumpy- you are caught in an avalanche and die 
+	end
+end 
